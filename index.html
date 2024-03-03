@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-block">
+            <div id="left1">
+                <!-- Nội dung của khối bên trên trái -->
+                <img id="avatar" width= 26.4% src="https://dean2020.edu.vn/wp-content/uploads/2019/06/hinh-6.png?fbclid=IwAR0lglhr6oJ5eQSRpGiweKiOS5ufU-k5ZFFVUu3MSm247pY_DVaq9Ef6m58"/>
+                <img id="circle" src="image.png"/>
+                <p id="info">MS: 20215593<br>
+                    Họ tên: Nguyễn Trọng Hưng<br>   
+                    Lớp: Kỹ thuật máy tính 04-K66<br>
+                    Email: hung.nt215593@sis.hust.edu.vn<br>
+                    Email cá nhân: hung.nt215593@sis.hust.edu.vn
+                </p>
+            </div>
+            <div id="left2">
+                <!-- Nội dung của khối bên dưới trái -->
+                <div class="trongleft2">
+                    <div>
+                        <button style="margin-left: 30px;">Trạng thái</button>
+                    </div>
+                    <div>
+                        <button>Quản lý</button>
+                    </div>
+                </div>
+                <p id="status">Trạng thái học tập: Học<br>
+                    CPA: 2.4<br>
+                    Nợ: 0 TC<br>
+                    Tích lũy: 63 TC<br>
+                    Mức cảnh cáo: M0<br>
+                    Trình độ: 2
+                </p>
+            </div>
+        </div>
+        <div class="right-block">
+            <div class="thanhtrang">
+                <button style="margin-left: 30px;">Lý lịch</button>
+                <button>Quyết định</button>
+                <button>Khen thưởng</button>
+                <button>Liên hệ</button>
+                <button>Nhận xét</button>
+                <button>Hoạt động tham gia</button>
+            </div>
+            <!-- Nội dung của khối bên phải -->
+            <h2 id="role1">Thông tin cá nhân</h2>
+            <div class="onright">
+                <p style="padding-left: 30px;">Ngày sinh: 17/09/2003<br>
+                    Số CMTND: 0309200317022003<br>
+                    Dân tộc: Kinh<br>
+                    Ngày vào Đoàn:<br>
+                    Đối tượng chính sách:<br>
+                    Số thẻ bảo hiểm: 0309200317022003<br>
+                    Địa chỉ thường trú:<br>
+                    Nơi ở hiện tại: Ngách 15/10 Gốc Đề Hà Nội Việt Nam
+                </p>
+
+                <p>
+                    Nơi sinh: Thái Bình<br>
+                    Nơi cấp: Thái Bình<br>
+                    Tôn giáo: Không<br>
+                    Ngày vào Đảng:<br>
+                </p>
+
+                <p style="padding-left: 60px;">
+                    Giới tính: Nam<br>
+                    Ngày cấp:<br>
+                    Chi đoàn:<br>
+                    Đoàn viên<br>
+                </p>
+            </div>
+            <h2 id="role1">Thông tin gia đình</h2>
+            <div class="onright">
+                <p style="padding-left: 30px;">
+                    Họ và tên cha: Nguyễn Trọng Thuyên<br>
+                    Dân tộc: Kinh<br>
+                    Nơi làm việc:<br>
+                    Địa chỉ thường trú:<br>
+                    Liên hệ:<br>
+                </p>
+
+                <p style="padding-left: 60px;">
+                    Năm sinh: 1965<br>
+                    Tôn giáo:
+                </p>
+
+                <p style="padding-left: 60px;">
+                    Quốc tịch: Kinh<br>
+                    Nghề nghiệp: Nhân viên<br>
+                </p>
+            </div>
+
+            <div class="onright">
+                <p style="padding-left: 30px;">
+                    Họ và tên mẹ: Phạm Thị Thu Phương<br>
+                    Dân tộc: Kinh<br>
+                    Nơi làm việc:<br>
+                    Địa chỉ thường trú:<br>
+                    Liên hệ:<br>
+                </p>
+
+                <p style="padding-left: 60px;">
+                    Năm sinh: 1974<br>
+                    Tôn giáo:
+                </p>
+
+                <p style="padding-left: 60px;">
+                    Quốc tịch:<br>
+                    Nghề nghiệp:
+                </p>
+            </div>
+            <div class="onright">
+                <h4 style="padding-left: 30px;">Thông tin người thân khác:<br>
+                    Thuộc hộ:<br></h4>
+                <h4 style="padding-left: 110px;">Số sổ:</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="bieudo">
+        <div style=" width: 40%;" >
+            <canvas id="bieudo1" style="width:100%;max-width:600px"></canvas>
+
+                <script>
+                    const xValues = ["20211", "20212", "20221", "20222"];
+                    const yValues = [13, 27, 46, 63];
+                    const barColors = ["green", "green","green","green"];
+
+                    new Chart("bieudo1", {
+                    type: "bar",
+                    data: {
+                        labels: xValues,
+                        datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                        }]
+                    },
+                    options: {
+                        legend: {display: false},
+                        title: {
+                        display: true,
+                        text: "Số tín chỉ tích lũy"
+                        }
+                    }
+                    });
+                </script>
+        </div>
+
+        <div  style="width: 40%;margin-left: 50px;">
+            <canvas id="bieudo2" style="width:100%;max-width:700px"></canvas>
+
+            <script>
+            const xyValues = [
+            {x:40, y:73},
+            {x:60, y:83},
+            {x:80, y:51},
+            {x:100, y:75}
+            ];
+            new Chart("bieudo2", {
+            type: "scatter",
+            data: {
+                datasets: [{
+                pointRadius: 4,
+                pointBackgroundColor: "rgb(0,0,255)",
+                data: xyValues
+                }]
+            },
+            options: {
+                legend: {display: false},
+                scales: {
+                xAxes: [{ticks: {min: 40, max:100}}],
+                yAxes: [{ticks: {min: 0, max:100}}],
+                }
+            }
+            });
+            </script>
+        </div>
+    </div>
+</body>
+</html>
